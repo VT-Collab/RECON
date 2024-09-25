@@ -4,7 +4,7 @@ In this repository we provide our implmentation of RECON for the Dynamic 2D simu
 
 # Install 
 
-The code was written and tested in python 3.8.10
+The code was written and tested in python 3.11.0
 
 1. (Optional) Crea a conda environment 
 
