@@ -6,13 +6,20 @@ In this repository we provide our implmentation of RECON for the Dynamic 2D simu
 
 The code was written and tested in python 3.8.10
 
-1. Clone the repository 
+1. (Optional) Crea a conda environment 
+
+```
+conda create -n RECON python==3.8.10
+conda activate RECON
+```
+
+2. Clone the repository 
 
 ```
 https://github.com/VT-Collab/RECON.git
 ```
 
-2. Install dependencies
+3. Install dependencies
 
 ```
 pip install -r requirements.txt
