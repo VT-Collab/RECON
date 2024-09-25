@@ -4,10 +4,18 @@ In this repository we provide our implmentation of RECON for the Dynamic 2D simu
 
 # Install 
 
-Clone the repository 
+The code was written and tested in python 3.8.10
+
+1. Clone the repository 
 
 ```
 https://github.com/VT-Collab/RECON.git
+```
+
+2. Install dependencies
+
+```
+pip install -r requirements.txt
 ```
 
 # Training model 
@@ -28,7 +36,7 @@ The model list includes: ['Exact', 'Partial', 'Other', 'Random']. For training t
 
 # Testing models
 
-By default the testing file fill run for 100 iterations and render 10 of those iterations. At the end it will print the average reward results on the terminal. It is possible to modify the number of iterations and render frequency by using the ``` --scenarios ``` and ``` --render_freq ``` arguments.
+By default the testing file will run for 100 iterations and render 10 of those iterations. At the end it will print the average reward results on the terminal. It is possible to modify the number of iterations and render frequency by using the ``` --scenarios ``` and ``` --render_freq ``` arguments.
 
 ```
 python test_models.py --scenarios 100 --render_freq 10

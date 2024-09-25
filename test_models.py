@@ -92,7 +92,7 @@ dataset = pickle.load(open("data/demos.pkl", "rb"))
 # load models
 # torch.manual_seed(0)
 model = BeaconVision(1)
-model.load_state_dict(torch.load('data/model.pt'))
+model.load_state_dict(torch.load('data/model.pt', weights_only=True))
 model.eval()
 
 
@@ -125,7 +125,7 @@ for i in range(args.scenarios):
 
     for b_idx, b_type in enumerate(MODEL_LIST[1:]):
         beacon_model = BeaconVision(b_dims[b_idx])
-        beacon_model.load_state_dict(torch.load('data/beacon_model_' + b_type + '.pt'))
+        beacon_model.load_state_dict(torch.load('data/beacon_model_' + b_type + '.pt', weights_only=True))
         beacon_model.eval()
 
         xi_beacon = rollout_policy(beacon_model, start_state, dynamic=True, image=background)
