@@ -1,1 +1,35 @@
-# RECON
+# RECON: Reducing Causal Confusion with Human-Placed Markers
+
+In this repository we provide our implmentation of RECON for the Dynamic 2D simulated environment
+
+# Install 
+
+Clone the repository 
+
+```
+https://github.com/VT-Collab/RECON.git
+```
+
+# Training model 
+
+A set of trained model has been provided. If you want to retrain all model a bash files is include. The bash file will generate 10 scenarios, and train all models.
+
+```
+./bash.sh
+```
+
+For retraining and individual model run:
+
+```
+python train_vision_model.py --beacon [Model]
+```
+
+The model list includes: ['Exact', 'Partial', 'Other', 'Random']. For training the baseline run the script without the ``` --beacon ``` argument.
+
+# Testing models
+
+By default the testing file fill run for 100 iterations and render 10 of those iterations. At the end it will print the average reward results on the terminal. It is possible to modify the number of iterations and render frequency by using the ``` --scenarios ``` and ``` --render_freq ``` arguments.
+
+```
+python test_models.py --scenarios 100 --render_freq 10
+```
