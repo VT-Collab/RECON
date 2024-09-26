@@ -6,10 +6,10 @@ In this repository we provide our implmentation of RECON for the Dynamic 2D simu
 
 The code was written and tested in python 3.11.0
 
-1. (Optional) Crea a conda environment 
+1. (Optional) Create a conda environment 
 
 ```
-conda create -n RECON python==3.8.10
+conda create -n RECON python==3.11.0
 conda activate RECON
 ```
 
@@ -33,7 +33,7 @@ A set of trained model has been provided. If you want to retrain all model a bas
 ./bash.sh
 ```
 
-For retraining and individual model run:
+For retraining an individual model run:
 
 ```
 python train_vision_model.py --beacon [Model]
@@ -43,7 +43,7 @@ The model list includes: ['Exact', 'Partial', 'Other', 'Random']. For training t
 
 # Testing models
 
-By default the testing file will run for 100 iterations and render 10 of those iterations. At the end it will print the average reward results on the terminal. It is possible to modify the number of iterations and render frequency by using the ``` --scenarios ``` and ``` --render_freq ``` arguments.
+By default, the testing file will run for 100 iterations and render 10 of those iterations. At the end, it will print the average reward results on the terminal. It is possible to modify the number of iterations and render frequency by using the ``` --scenarios ``` and ``` --render_freq ``` arguments.
 
 ```
 python test_models.py --scenarios 100 --render_freq 10
